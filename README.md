@@ -5,7 +5,7 @@ This helps the bot stay up to date by syncing customer issues from auto-recorded
 
 🔧 How It Works:
 A new file is uploaded to an S3 bucket.
-An S3 event notification triggers a Lambda function, which invokes Amazon Transcribe to convert the podcast into text and store in S3 bucket.
+An S3 event notification triggers a Lambda function, which invokes Amazon Transcribe to convert the audio into text and store in S3 bucket.
 The Lambda function uses Bedrock Knowledge Base APIs to ingest the file automatically.
 Upon successful ingestion, a confirmation is sent via SNS.
 This removes manual intervention and enables continuous learning for the chatbot — making it smarter with each update.
